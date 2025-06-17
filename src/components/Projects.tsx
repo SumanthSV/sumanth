@@ -20,7 +20,7 @@ const Projects = () => {
       image: './Sukalpa.png',
       technologies: ['React', 'ThailwindCSS', 'JavaScript', 'HTML'],
       github: 'https://github.com/Sukalpa24/Sukalpa-24',
-      live: 'https://www.gmu.ac.in/public/sukalpa24/',
+      live: 'https://sukalpa-24.vercel.app/',
       duration: '1 Week',
       team: '2 developers',
       features: ['Admin Dashboard', 'Real-time Updates', 'Mobile Responsive','Event Registration', 'Event Listings']
@@ -40,9 +40,9 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'AI TO-DO Summarizer ',
-      shortDescription: 'AI-powered To-Do List Summarizer',
-      fullDescription: 'This AI-based web application automatically summarizes long or complex to-do lists into concise, actionable items using the AI. It enhances productivity by simplifying task overviews and reducing cognitive load. Built with a sleek frontend and seamless AI integration, it offers a smarter way to manage daily tasks.',
+      title: 'SmartTasker',
+      shortDescription: 'AI-powered Task Summarizer',
+      fullDescription: 'This AI-based web application automatically summarizes long or complex Tasks lists into concise, actionable items using the AI. It enhances productivity by simplifying task overviews and reducing cognitive load. Built with a sleek frontend and seamless AI integration, it offers a smarter way to manage daily tasks.',
       image: 'https://thumbs.dreamstime.com/b/numbered-to-do-list-word-win-pen-lying-written-66288525.jpg',
       technologies: ['Next.js', 'OpenAI API', 'Convex','Tailwind CSS', 'TypeScript','jspdf','sonner'],
       github: 'https://github.com/SumanthSV/AI_Todo_summarizer',
