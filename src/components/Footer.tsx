@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUp, Github, Linkedin, Mail, Heart } from 'lucide-react';
 
@@ -12,6 +12,13 @@ const Footer: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText('sumanthsv04@gmail.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1000); // Hide message after 1 seconds
   };
 
   // const quickLinks = [
@@ -95,9 +102,34 @@ const Footer: React.FC = () => {
           >
             <h4 className="text-lg font-semibold text-slate-200">Get In Touch</h4>
             <div className="space-y-2">
-              <p className="text-slate-400">
-                <span className="text-slate-300">Email:</span> sumanthsv04@gmail.com
-              </p>
+              <div className="text-slate-400">
+                <p className="flex items-center gap-2">
+                  <span className="text-slate-300">Email:</span>
+                  sumanthsv04@gmail.com
+
+                  <div className="relative flex flex-col items-center">
+                    <button
+                      onClick={handleCopy}
+                      className="text-slate-400 hover:text-slate-200 transition"
+                      title="Copy Email"
+                    >
+                      <img
+                        src="/copy.png"
+                        alt="Copy Icon"
+                        className="w-4 h-4"
+                      />
+                    </button>
+
+                    <div
+                      className={`absolute top-7 text-gray-800 text-sm transition-all duration-500 bg-gray-400 rounded-md px-2 py-1 ${
+                        copied ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+                      }`}
+                    >
+                      copied!
+                    </div>
+                  </div>
+                </p>
+              </div>
               <p className="text-slate-400">
                 <span className="text-slate-300">Location:</span> Davanagere, Karnataka
               </p>

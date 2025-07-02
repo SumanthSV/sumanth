@@ -14,6 +14,45 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'Smart Attendance Payroll Adjustment System',
+      shortDescription: 'Automated attendance and payroll management',
+      fullDescription: 'Built a full-stack system managing 1000+ employee records with secure role-based authentication and real-time payroll adjustments. Improved UI responsiveness by 40% and ensured seamless RESTful API integration for efficient data handling. ',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+      technologies: ['React.js', 'Express.js','Axios', 'Node.js', 'MangoDB', 'Tailwind CSS', 'JWT','Nodemailer'],
+      github: 'https://github.com/SumanthSV/AMS',
+      live: 'https://ams-sumanth-svs-projects.vercel.app/',
+      duration: '1 months',
+      team: 'Personal Project',
+      features: ['Role-based Authentication', 'Real-time Payroll Adjustments', 'Responsive UI', 'RESTful API Integration', 'Employee Management', 'Attendance Tracking', 'Email Notifications','Leave Management','Shift Scheduling', 'Performance Analytics']
+    },
+    {
+      id: 2,
+      title: 'Data AI - Chemist',
+      shortDescription: 'AI-powered spreadsheet cleanup and rule configurator',
+      fullDescription: 'Built a full-stack AI-powered tool that helps non-technical users upload, clean, and validate messy CSV/XLSX files, define allocation rules using a user-friendly UI or natural language, and export clean datasets with rules.json and priorities.json. Integrated OpenAI for smart rule generation and auto-corrections. Implemented editable tables, validations, and rule builder with live JSON preview.',
+      image: '/AI_chemist.png',
+      technologies: ['Next.js', 'TypeScript', 'TailwindCSS', 'Zod', 'OpenAI API', 'TanStack Table', 'Shadcn UI'],
+      github: 'https://github.com/SumanthSV/AI_Chemist',
+      live: 'https://ai-chemist-gray.vercel.app/',
+      duration: '1 Week',
+      team: 'Personal Project',
+      features: ['AI-Powered Rule Builder','Natural Language to JSON Conversion','Multi-File CSV/XLSX Upload','Editable Grid with Inline Validation','rules.json & priorities.json Export','Validation Summary Panel','Mobile Responsive']
+    },
+    {
+      id: 3,
+      title: 'Smart - Tasker',
+      shortDescription: 'AI-powered Task Summarizer',
+      fullDescription: 'This AI-based web application automatically summarizes long or complex Tasks lists into concise, actionable items using the AI. It enhances productivity by simplifying task overviews and reducing cognitive load. Built with a sleek frontend and seamless AI integration, it offers a smarter way to manage daily tasks.',
+      image: '/smarttasker.jpg',
+      technologies: ['Next.js', 'OpenAI API', 'Convex','Tailwind CSS', 'TypeScript','jspdf','sonner'],
+      github: 'https://github.com/SumanthSV/AI_Todo_summarizer',
+      live: 'https://ai-todo-summarizer.vercel.app/',
+      duration: '1 week',
+      team: 'Personal Project',
+      features: ['AI Summarization', 'Task Management', 'User Authentication', 'Responsive Design', 'PDF Export', 'Real-time Updates', 'Intuitive UI']
+    },
+    {
+      id: 4,
       title: 'Sukalpa-24',
       shortDescription: 'Sukalpa-24 event Page',
       fullDescription: 'Built a responsive website for managing Sukalpa 24 event registrations and showcasing fest details.Handled 1000+ users with event listings, registration forms, and real-time updates.Enhanced user experience and streamlined coordination for organizers and attendees.',
@@ -26,33 +65,7 @@ const Projects = () => {
       features: ['Admin Dashboard', 'Real-time Updates', 'Mobile Responsive','Event Registration', 'Event Listings']
     },
     {
-      id: 2,
-      title: 'Smart Attendance Payroll Adjustment System',
-      shortDescription: 'Automated attendance and payroll management',
-      fullDescription: 'Built a full-stack system managing 1000+ employee records with secure role-based authentication and real-time payroll adjustments. Improved UI responsiveness by 40% and ensured seamless RESTful API integration for efficient data handling. ',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      technologies: ['React.js', 'Express.js','Axios', 'Node.js', 'MangoDB', 'Tailwind CSS', 'JWT','Nodemailer'],
-      github: 'https://github.com/SumanthSV/AMS',
-      live: 'https://ams-sumanth-svs-projects.vercel.app/',
-      duration: '1 months',
-      team: 'Individual Project',
-      features: ['Role-based Authentication', 'Real-time Payroll Adjustments', 'Responsive UI', 'RESTful API Integration', 'Employee Management', 'Attendance Tracking', 'Email Notifications','Leave Management','Shift Scheduling', 'Performance Analytics']
-    },
-    {
-      id: 3,
-      title: 'SmartTasker',
-      shortDescription: 'AI-powered Task Summarizer',
-      fullDescription: 'This AI-based web application automatically summarizes long or complex Tasks lists into concise, actionable items using the AI. It enhances productivity by simplifying task overviews and reducing cognitive load. Built with a sleek frontend and seamless AI integration, it offers a smarter way to manage daily tasks.',
-      image: 'https://thumbs.dreamstime.com/b/numbered-to-do-list-word-win-pen-lying-written-66288525.jpg',
-      technologies: ['Next.js', 'OpenAI API', 'Convex','Tailwind CSS', 'TypeScript','jspdf','sonner'],
-      github: 'https://github.com/SumanthSV/AI_Todo_summarizer',
-      live: 'https://ai-todo-summarizer.vercel.app/',
-      duration: '1 week',
-      team: 'Individual Project',
-      features: ['AI Summarization', 'Task Management', 'User Authentication', 'Responsive Design', 'PDF Export', 'Real-time Updates', 'Intuitive UI']
-    },
-    {
-      id: 4,
+      id: 5,
       title: 'Capstone: Online retail store',
       shortDescription: 'Full-stack e-commerce platform with admin panel',
       fullDescription: 'Built a full-stack e-commerce platform with product listings, user authentication (JWT), and admin dashboard.Implemented secure login, role-based access, and real-time order management for seamless transactions.Optimized backend queries and UI performance to support 1000+ products and active users.',
@@ -65,7 +78,7 @@ const Projects = () => {
       features: ['Product Listings', 'User Authentication', 'Admin Dashboard', 'Order Management', 'Role-based Access', 'Real-time Updates', 'Secure Transactions']
     },
     {
-      id: 5,
+      id: 6,
       title: 'Student CO’s and PO’s management System',
       shortDescription: 'Student CO-PO mapping and evaluation system',
       fullDescription: 'Developed a robust web-based platform using HTML, CSS, MySQL, and PHP that automated academic outcome tracking; eliminated 80% of manual errors while enhancing data accuracy for over 500 student records.',
