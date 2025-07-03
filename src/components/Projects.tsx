@@ -89,20 +89,7 @@ const Projects = () => {
       duration: '1 month',
       team: '3 developers',
       features: ['CO-PO Mapping', 'Automated Evaluation', 'Data Analytics', 'User Management', 'Performance Tracking', 'Custom Reporting']
-    },
-    // {
-    //   id: 6,
-    //   title: 'AI Content Generator',
-    //   shortDescription: 'AI-powered content creation tool',
-    //   fullDescription: 'An innovative AI-powered content generation platform that helps users create high-quality content for various purposes. Features include customizable templates, multiple content types, SEO optimization suggestions, and integration with popular CMS platforms.',
-    //   image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-    //   technologies: ['Next.js', 'OpenAI API', 'Tailwind', 'Prisma', 'Vercel', 'Stripe'],
-    //   github: '#',
-    //   live: '#',
-    //   duration: '2 months',
-    //   team: '2 developers',
-    //   features: ['AI Generation', 'Custom Templates', 'SEO Optimization', 'CMS Integration']
-    // }
+    }
   ];
 
   const selectedProjectData = projects.find(p => p.id === selectedProject);
