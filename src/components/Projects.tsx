@@ -19,7 +19,7 @@ const Projects = () => {
       fullDescription: 'Engineered an Agentic AI platform shortlisted from 9100+ ideas at Google Cloud’s Agentic AI Day (out of 56,000+ developers). Sahayak supports teachers in multi-grade classrooms by autonomously generating localized worksheets, visual aids, lesson plans, and student assessments. Leveraged Gemini LLM, Vertex AI, and Firebase to reduce teacher prep time by 75% and promote equitable learning in low-tech rural schools.',
       image: '/Sahayak.png',
       technologies: [
-        'Typescript', 'React.js', 'Firebase', 'Tailwind CSS', 'Gemini LLM', 'Vertex AI', 'Cloud Run', 'Google Workspace API'
+        'Gemini LLM','Google Workspace API','Vertex AI','Typescript', 'React.js', 'Firebase', 'Tailwind CSS','Cloud Run'
       ],
       github: 'https://github.com/SumanthSV/Sahayak',
       live: 'https://sahayak-aba90.web.app/',
