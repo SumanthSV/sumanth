@@ -14,17 +14,19 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Smart Attendance Payroll Adjustment System',
-      shortDescription: 'Automated attendance and payroll management',
-      fullDescription: 'Built a full-stack system managing 1000+ employee records with secure role-based authentication and real-time payroll adjustments. Improved UI responsiveness by 40% and ensured seamless RESTful API integration for efficient data handling. ',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      technologies: ['React.js', 'Express.js','Axios', 'Node.js', 'MangoDB', 'Tailwind CSS', 'JWT','Nodemailer'],
-      github: 'https://github.com/SumanthSV/AMS',
-      live: 'https://ams-sumanth-svs-projects.vercel.app/',
-      duration: '1 months',
-      team: 'Personal Project',
-      features: ['Role-based Authentication', 'Real-time Payroll Adjustments', 'Responsive UI', 'RESTful API Integration', 'Employee Management', 'Attendance Tracking', 'Email Notifications','Leave Management','Shift Scheduling', 'Performance Analytics']
-    },
+      title: 'Sahayak – Agentic AI Co-Teacher Platform',
+      shortDescription: 'Empowering under-resourced classrooms with multilingual AI agents',
+      fullDescription: 'Engineered an Agentic AI platform shortlisted from 9100+ ideas at Google Cloud’s Agentic AI Day (out of 56,000+ developers). Sahayak supports teachers in multi-grade classrooms by autonomously generating localized worksheets, visual aids, lesson plans, and student assessments. Leveraged Gemini LLM, Vertex AI, and Firebase to reduce teacher prep time by 75% and promote equitable learning in low-tech rural schools.',
+      image: '/public/Sahayak.png',
+      technologies: [
+        'Typescript', 'React.js', 'Firebase', 'Tailwind CSS', 'Gemini LLM', 'Vertex AI', 'Cloud Run', 'Google Workspace API'
+      ],
+      github: 'https://github.com/SumanthSV/Sahayak',
+      live: 'https://sahayak-aba90.web.app/',
+      duration: '36 hours (Hackathon)',
+      team: '2 Members',
+      features: ['Multilingual Hyperlocal Story Generator','Smart Worksheet Creator from Textbook Images','AI-Driven Visual Aid and Concept Explainer','Voice-Based Student Doubt Solver (Offline-Friendly)','Autonomous AI Lesson Planner','Reading Fluency Assessment via Speech Recognition','Firebase Auth & Storage','Real-Time Feedback Generator','Curriculum-Aligned Content Generation','Offline-First Design for Rural Deployment']
+  },
     {
       id: 2,
       title: 'Data AI - Chemist',
@@ -66,16 +68,16 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: 'Capstone: Online retail store',
-      shortDescription: 'Full-stack e-commerce platform with admin panel',
-      fullDescription: 'Built a full-stack e-commerce platform with product listings, user authentication (JWT), and admin dashboard.Implemented secure login, role-based access, and real-time order management for seamless transactions.Optimized backend queries and UI performance to support 1000+ products and active users.',
-      image: 'https://retail-merchandiser.com/wp-content/uploads/sites/8/2023/12/online-shopping-image-800x445.jpeg',
-      technologies: ['React.js','Java','Tailwind CSS','Axios','Spring Boot', 'MySQL', 'JWT', 'Maven','Hibernate'],
-      github: 'https://github.com/SumanthSV/Capstone',
-      live: 'https://capstone-two-xi.vercel.app/',
+      title: 'Smart Attendance Payroll Adjustment System',
+      shortDescription: 'Automated attendance and payroll management',
+      fullDescription: 'Built a full-stack system managing 1000+ employee records with secure role-based authentication and real-time payroll adjustments. Improved UI responsiveness by 40% and ensured seamless RESTful API integration for efficient data handling. ',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+      technologies: ['React.js', 'Express.js','Axios', 'Node.js', 'MangoDB', 'Tailwind CSS', 'JWT','Nodemailer'],
+      github: 'https://github.com/SumanthSV/AMS',
+      live: 'https://ams-sumanth-svs-projects.vercel.app/',
       duration: '1 months',
-      team: '3 developers',
-      features: ['Product Listings', 'User Authentication', 'Admin Dashboard', 'Order Management', 'Role-based Access', 'Real-time Updates', 'Secure Transactions']
+      team: 'Personal Project',
+      features: ['Role-based Authentication', 'Real-time Payroll Adjustments', 'Responsive UI', 'RESTful API Integration', 'Employee Management', 'Attendance Tracking', 'Email Notifications','Leave Management','Shift Scheduling', 'Performance Analytics']
     },
     {
       id: 6,
