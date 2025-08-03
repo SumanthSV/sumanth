@@ -14,14 +14,14 @@ const Skills: React.FC = () => {
     {
       title: 'Backend',
       icon: <Server className="w-6 h-6" />,
-      skills: ['Java', 'Node.js', 'Express.js', 'REST APIs', 'LLMs','Firebase', 'GCP'],
+      skills: ['Java', 'Node.js', 'Express.js', 'LLMs','Firebase', 'GCP'],
       gradient: 'from-green-400 to-emerald-600',
       bgGradient: 'from-green-400/10 to-emerald-600/10'
     },
     {
       title: 'Tools & Others',
       icon: <Wrench className="w-6 h-6" />,
-      skills: ['MySQL', 'MongoDB', 'Postman', 'Git', 'Github', 'Eclipse','Firebase Tools','VS Code'],
+      skills: ['MySQL', 'MongoDB', 'Postman', 'Git', 'Github','Firebase Tools'],
       gradient: 'from-purple-400 to-pink-600',
       bgGradient: 'from-purple-400/10 to-pink-600/10'
     }
