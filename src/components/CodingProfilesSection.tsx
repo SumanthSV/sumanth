@@ -11,7 +11,7 @@ const CodingProfiles: React.FC = () => {
       icon: <Code className="w-8 h-8" />,
       gradient: 'from-green-400 to-emerald-600',
       bgGradient: 'from-green-400/10 to-emerald-600/10',
-      stats: '400+ Problems',
+      stats: '450+ Problems',
       url: 'https://www.geeksforgeeks.org/user/sumant6um1/'
     },
     {
