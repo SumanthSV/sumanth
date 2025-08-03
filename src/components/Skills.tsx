@@ -7,21 +7,21 @@ const Skills: React.FC = () => {
     {
       title: 'Frontend',
       icon: <Globe className="w-6 h-6" />,
-      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'i18next', 'JavaScript', 'Responsive Design'],
+      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'i18next', 'JavaScript'],
       gradient: 'from-cyan-400 to-blue-600',
       bgGradient: 'from-cyan-400/10 to-blue-600/10'
     },
     {
       title: 'Backend',
       icon: <Server className="w-6 h-6" />,
-      skills: ['Java', 'Node.js', 'Express.js', 'REST APIs', 'Microservices','Firebase', 'Google Cloud','LLM orchestration'],
+      skills: ['Java', 'Node.js', 'Express.js', 'REST APIs', 'LLMs','Firebase', 'GCP'],
       gradient: 'from-green-400 to-emerald-600',
       bgGradient: 'from-green-400/10 to-emerald-600/10'
     },
     {
       title: 'Tools & Others',
       icon: <Wrench className="w-6 h-6" />,
-      skills: ['SQL', 'MongoDB', 'Postman', 'Git', 'Github', 'Eclipse','Firebase Tools','VS Code','PWA','GCP'],
+      skills: ['MySQL', 'MongoDB', 'Postman', 'Git', 'Github', 'Eclipse','Firebase Tools','VS Code'],
       gradient: 'from-purple-400 to-pink-600',
       bgGradient: 'from-purple-400/10 to-pink-600/10'
     }
