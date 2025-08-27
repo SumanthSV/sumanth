@@ -33,7 +33,7 @@ AI Engineer and Software Developer
 
 Expert in rapid prototyping, system thinking, and full-cycle product dev
 
-Experienced with React, Firebase, Google Cloud, and modern JavaScript
+Experienced with React, Firebase, Google Cloud, and modern JavaScript, Node.js
 
 Strong grasp of building under pressure, especially in hackathons
 
@@ -98,7 +98,7 @@ No fluff. No vague adjectives. Just real-world answers that show you're ready to
 
 export async function sendToOpenAI(message: string, previousMessages: Message[] = []): Promise<string> {
   if (!OPENAI_API_KEY) {
-    throw new Error('OpenAI API key is not configured. Please add VITE_OPENAI_API_KEY to your environment variables.');
+    throw new Error('OpenAI API key is not configured.');
   }
 
   try {

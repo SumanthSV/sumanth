@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MessageCircle, X } from 'lucide-react';
 
 interface ChatButtonProps {
   isOpen: boolean;
@@ -9,61 +8,55 @@ interface ChatButtonProps {
 
 const ChatButton: React.FC<ChatButtonProps> = ({ isOpen, onClick }) => {
   return (
-    <div>
-        <motion.button
-      onClick={onClick}
-      whileHover={{ scale: 1.1, y: -2 }}
-      whileTap={{ scale: 0.9 }}
-      className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full shadow-lg hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-300 z-50 flex items-center justify-center group"
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ 
-        type: "spring", 
-        damping: 15, 
-        stiffness: 300,
-        delay: 1 
-      }}
-    >
-      <motion.div
-        animate={{ rotate: isOpen ? 45 : 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        {isOpen ? (
-            <img
-                src='/Chatbot.jpg'
-                alt="Close Chat"
-                className="w-18 h-18 rounded-full object-cover"
-            />
-            ) : (
-            <img
-                src="/Chatbot.jpg"
-                alt="Open Chat"
-                className="w-18 h-18 rounded-full object-cover"
-            />
-            )}
-      </motion.div>
+    <div className="fixed bottom-6 right-6 md:bottom-12 md:right-16 z-50 flex flex-col items-end">
       
-      {/* Pulse animation when closed */}
+      {/* Speech bubble tagline */}
       {!isOpen && (
         <motion.div
-          className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0, 0.3] }}
-          transition={{ duration: 3, repeat: Infinity }}
-        />
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          className="mb-3 relative bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-4 py-2 rounded-2xl shadow-lg max-w-[220px] text-sm font-medium"
+        >
+          Wanna get to know more about me?{" "}
+          <span className="font-extrabold">Let’s talk!</span>
+          <div className="absolute bottom-[-6px] right-4 w-3 h-3 bg-gradient-to-r from-purple-600 to-cyan-500 rotate-45"></div>
+        </motion.div>
       )}
-      
-      {/* Tooltip */}
-      <motion.div
-        initial={{ opacity: 0, x: 10 }}
-        whileHover={{ opacity: 1, x: 0 }}
-        className="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg whitespace-nowrap pointer-events-none"
+
+      {/* Button itself */}
+      <motion.button
+        onClick={onClick}
+        whileHover={{ scale: 1.1, rotate: 3 }}
+        whileTap={{ scale: 0.9 }}
+        className="w-16 h-16 rounded-full shadow-lg overflow-hidden bg-white flex items-center justify-center relative"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ 
+          type: "spring", 
+          damping: 15, 
+          stiffness: 300,
+          delay: 0.8
+        }}
       >
-        {isOpen ? 'Close chat' : 'Chat with Sumanth'}
-        <div className="absolute top-1/2 -right-1 transform -translate-y-1/2 w-2 h-2 bg-gray-900 rotate-45" />
-      </motion.div>
-    </motion.button>
+        <motion.img
+          src="/Chatbot.jpg"
+          alt={isOpen ? "Close Chat" : "Open Chat"}
+          className="w-full h-full object-cover"
+          animate={{ rotate: isOpen ? 45 : 0 }}
+          transition={{ duration: 0.6 }}
+        />
+
+        {/* Glow ring */}
+        {!isOpen && (
+          <motion.div
+            className="absolute inset-0 rounded-full border-4 border-purple-400/40"
+            animate={{ scale: [1, 1.3, 1], opacity: [0.6, 0, 0.6] }}
+            transition={{ duration: 2.5, repeat: Infinity }}
+          />
+        )}
+      </motion.button>
     </div>
-    
   );
 };
 

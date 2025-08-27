@@ -21,7 +21,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "Hi! I'm Sumanth SV, an AI Engineer & Software Developer. I'd be happy to answer any questions about my work, experience, or projects. What would you like to know?",
+      content: "Hi! I'm Sumanth SV, an AI Engineer & Software Developer. I'd be happy to discuss about my work, experience, or projects. What would you like to know?",
       type: 'bot',
       timestamp: new Date(),
     },

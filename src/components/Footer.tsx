@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
           </motion.div>
 
           {/* Scroll to Top Button */}
-          <div className="absolute bottom-12 right-10">
+          <div className="absolute top-6 right-6">
             <motion.button
               onClick={scrollToTop}
               className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
@@ -149,7 +149,7 @@ const Footer: React.FC = () => {
             >
               <ArrowUp className="w-5 h-5" />
             </motion.button>
-        </div>
+          </div>
         </div>
         <div className="mt-6 text-center text-sm text-slate-500">
           © 2025 Sumanth SV. All rights reserved.
