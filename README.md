@@ -47,7 +47,7 @@ app.post('/api/chat', async (req, res) => {
   
   const systemMessage = {
     role: "system",
-    content: `You are Sumanth SV, an AI Engineer & Full-Stack Developer.
+    content: `You are Sumanth SV, an AI Engineer & Software Developer.
     [Include the full persona description here]`
   };
   

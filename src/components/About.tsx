@@ -50,7 +50,7 @@ const About = () => {
         About Me
       </h2>
       <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
-        I'm a passionate full-stack developer with 2+ years of experience creating 
+        I'm a passionate Software developer with 2+ years of experience creating 
         digital solutions that bridge the gap between design and functionality. 
         I love turning complex problems into simple, beautiful designs.
       </p>

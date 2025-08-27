@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, MessageCircle, Loader2 } from 'lucide-react';
 import MessageBubble from './MessageBubble';
 import InputBar from './InputBar';
-import { sendToOpenAI } from '../services/openai';
+import { sendToOpenAI } from '../services/openai.ts';
 
 interface Message {
   id: string;
@@ -21,7 +21,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "Hi! I'm Sumanth SV, an AI Engineer & Full-Stack Developer. I'd be happy to answer any questions about my work, experience, or projects. What would you like to know?",
+      content: "Hi! I'm Sumanth SV, an AI Engineer & Software Developer. I'd be happy to answer any questions about my work, experience, or projects. What would you like to know?",
       type: 'bot',
       timestamp: new Date(),
     },
@@ -64,7 +64,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         content: error instanceof Error && error.message.includes('API key') 
-          ? "I need an OpenAI API key to respond. Please add VITE_OPENAI_API_KEY to your environment variables."
+          ? "I'm currently experiencing some technical difficulties. In the meantime, feel free to check out my projects on GitHub or reach out via email at sumanthsv04@gmail.com!"
           : "I'm currently experiencing some technical difficulties. In the meantime, feel free to check out my projects on GitHub or reach out via email at sumanthsv04@gmail.com!",
         type: 'bot',
         timestamp: new Date(),
@@ -98,7 +98,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
               </div>
               <div>
                 <h3 className="text-white font-semibold">Sumanth SV</h3>
-                <p className="text-gray-400 text-xs">AI Engineer & Full-Stack Developer</p>
+                <p className="text-gray-400 text-xs">AI Engineer & Software Developer</p>
               </div>
             </div>
             <motion.button
