@@ -90,8 +90,8 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
           }}
           className="
             fixed bottom-24 
-            right-6 md:right-6 sm:right-2 
-            w-96 md:w-96 sm:w-[90%] 
+            right-6 md:right-6 sm:right-4 
+            w-96 md:w-96 sm:w-[80%] 
             h-[500px] glass-effect 
             rounded-2xl border border-white/20 
             shadow-2xl z-40 flex flex-col 
