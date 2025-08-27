@@ -88,7 +88,15 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
             stiffness: 300,
             duration: 0.3 
           }}
-          className="fixed bottom-24 right-6 w-96 h-[500px] glass-effect rounded-2xl border border-white/20 shadow-2xl z-40 flex flex-col overflow-hidden chat-window"
+          className="
+            fixed bottom-24 
+            right-6 md:right-6 sm:right-2 
+            w-96 md:w-96 sm:w-[90%] 
+            h-[500px] glass-effect 
+            rounded-2xl border border-white/20 
+            shadow-2xl z-40 flex flex-col 
+            overflow-hidden chat-window
+          "
         >
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-white/10 bg-gradient-to-r from-purple-500/10 to-cyan-500/10">
