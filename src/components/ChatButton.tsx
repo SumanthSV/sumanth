@@ -19,7 +19,7 @@ const ChatButton: React.FC<ChatButtonProps> = ({ isOpen, onClick }) => {
           className="mb-3 relative bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-4 py-2 rounded-2xl shadow-lg max-w-[220px] text-sm font-medium"
         >
           Wanna get to know more about me?{" "}
-          <span className="font-extrabold">Let’s talk!</span>
+          <span className="font-extrabold">Let’s chat!</span>
           <div className="absolute bottom-[-6px] right-4 w-3 h-3 bg-gradient-to-r from-purple-600 to-cyan-500 rotate-45"></div>
         </motion.div>
       )}
