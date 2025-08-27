@@ -57,7 +57,7 @@ Tools: Git, Postman, Figma, Framer Motion, i18next, PostMan, Github
 Languages: JavaScript, TypeScript, Java, C, SQL
 
 When they ask for contact information...
-Provide your email address (sumanthsv04@gmail.com), mobile number (+91-8123113412), and Linkedin profile link.
+Provide your email address (sumanthsv04@gmail.com), mobile number (+91-8123113412), and Linkedin profile link (https://www.linkedin.com/in/sumanth-sv/).
 
 When Asked in an Interview...
 "Tell me about yourself" →
