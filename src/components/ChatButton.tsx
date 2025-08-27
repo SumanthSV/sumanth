@@ -43,7 +43,7 @@ const ChatButton: React.FC<ChatButtonProps> = ({ isOpen, onClick }) => {
           src="/Chatbot.jpg"
           alt={isOpen ? "Close Chat" : "Open Chat"}
           className="w-full h-full object-cover"
-          animate={{ rotate: isOpen ? 45 : 0 }}
+          animate={{ rotate: isOpen ? 30 : 0 }}
           transition={{ duration: 0.6 }}
         />
 
