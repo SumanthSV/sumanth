@@ -237,5 +237,66 @@ html {
   transform-origin: center;
 }
 
+/* Chat widget specific styles */
+.chat-pulse {
+  animation: chat-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
+@keyframes chat-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
 
+/* Enhanced pulse glow for microphone */
+.pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(239, 68, 68, 0.8);
+    transform: scale(1.05);
+  }
+}
+
+/* Chat window mobile responsiveness */
+@media (max-width: 768px) {
+  .chat-window {
+    width: calc(100vw - 2rem);
+    right: 1rem;
+    left: 1rem;
+    bottom: 5rem;
+  }
+}
+
+/* Smooth scrolling for chat messages */
+.chat-messages {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for chat */
+.chat-messages::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+  border-radius: 2px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.7);
+}
