@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, MessageCircle, Loader2 } from 'lucide-react';
 import MessageBubble from './MessageBubble';
 import InputBar from './InputBar';
+import { sendToOpenAI } from '../services/openai';
 
 interface Message {
   id: string;
-  text: string;
-  sender: 'user' | 'bot';
+  content: string;
+  type: 'user' | 'bot';
   timestamp: Date;
 }
 
@@ -20,8 +21,8 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hi! I'm Sumanth SV, an AI Engineer & Full-Stack Developer. I'd be happy to answer any questions about my work, experience, or projects. What would you like to know?",
-      sender: 'bot',
+      content: "Hi! I'm Sumanth SV, an AI Engineer & Full-Stack Developer. I'd be happy to answer any questions about my work, experience, or projects. What would you like to know?",
+      type: 'bot',
       timestamp: new Date(),
     },
   ]);
@@ -39,8 +40,8 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
   const sendMessage = async (text: string) => {
     const userMessage: Message = {
       id: Date.now().toString(),
-      text,
-      sender: 'user',
+      content: text,
+      type: 'user',
       timestamp: new Date(),
     };
 
@@ -48,30 +49,12 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
     setIsTyping(true);
 
     try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: text,
-          history: messages.map(msg => ({
-            role: msg.sender === 'user' ? 'user' : 'assistant',
-            content: msg.text,
-          })),
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to get response');
-      }
-
-      const data = await response.json();
+      const responseText = await sendToOpenAI(text, messages);
       
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: data.response || "I apologize, but I'm having trouble responding right now. Please try again later.",
-        sender: 'bot',
+        content: responseText,
+        type: 'bot',
         timestamp: new Date(),
       };
 
@@ -80,8 +63,10 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
       console.error('Chat error:', error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "I'm currently experiencing some technical difficulties. In the meantime, feel free to check out my projects on GitHub or reach out via email at sumanthsv04@gmail.com!",
-        sender: 'bot',
+        content: error instanceof Error && error.message.includes('API key') 
+          ? "I need an OpenAI API key to respond. Please add VITE_OPENAI_API_KEY to your environment variables."
+          : "I'm currently experiencing some technical difficulties. In the meantime, feel free to check out my projects on GitHub or reach out via email at sumanthsv04@gmail.com!",
+        type: 'bot',
         timestamp: new Date(),
       };
       setMessages(prev => [...prev, errorMessage]);
@@ -131,8 +116,8 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
             {messages.map((message, index) => (
               <MessageBubble
                 key={message.id}
-                message={message.text}
-                sender={message.sender}
+                message={message.content}
+                sender={message.type}
                 isLatest={index === messages.length - 1}
               />
             ))}

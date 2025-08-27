@@ -81,15 +81,32 @@ app.post('/api/chat', async (req, res) => {
    npm install
    ```
 
-3. **Start development server**
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   Then edit `.env` and add your OpenAI API key:
+   ```
+   VITE_OPENAI_API_KEY=your_actual_api_key_here
+   ```
+   Get your API key from: https://platform.openai.com/api-keys
+
+4. **Start development server**
    ```bash
    npm run dev
    ```
 
-4. **Set up backend** (required for chatbot functionality)
-   - Create a backend server with `/api/chat` endpoint
-   - Configure OpenAI API key securely
-   - Include the professional persona in system messages
+## API Configuration
+
+The chatbot uses OpenAI's GPT-3.5-turbo model through the ChatAnywhere API endpoint. Make sure to:
+
+1. **Secure your API key**: Never commit your `.env` file to version control
+2. **API Limits**: Be aware of your OpenAI usage limits and costs
+3. **Error Handling**: The app includes comprehensive error handling for API failures
+
+### Environment Variables
+
+- `VITE_OPENAI_API_KEY`: Your OpenAI API key (required for chatbot functionality)
 
 ## Chatbot Features
 
