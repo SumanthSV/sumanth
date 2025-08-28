@@ -56,12 +56,12 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message, sender, isLatest
             )}
           </p>
           
-          {!isUser && isSupported && !isTyping && (
+          {!isUser && isSupported && (
             <motion.button
               onClick={handleSpeak}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="absolute -bottom-2 -right-2 glass-effect p-2 rounded-full hover-glow transition-all duration-300 group"
+              className="absolute -top-2 -left-2 glass-effect p-2 rounded-full hover-glow transition-all duration-300 group"
               title={isSpeaking ? "Stop speaking" : "Speak message"}
             >
               {isSpeaking ? (

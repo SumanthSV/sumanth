@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-slate-200">Get In Touch</h4>
             <div className="space-y-2">
               <div className="text-slate-400">
-                <p className="flex items-center gap-2">
+                <div className="flex items-center gap-2">
                   <span className="text-slate-300">Email:</span>
                   sumanthsv04@gmail.com
 
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
                       copied!
                     </div>
                   </div>
-                </p>
+                </div>
               </div>
               <p className="text-slate-400">
                 <span className="text-slate-300">Location:</span> Davanagere, Karnataka
