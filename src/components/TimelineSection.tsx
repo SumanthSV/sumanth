@@ -5,6 +5,17 @@ import { Briefcase, GraduationCap, MapPin, Calendar } from 'lucide-react';
 const Timeline: React.FC = () => {
   const experiences = [
     {
+      title: 'Software Engineer Intern',
+      company: 'Biocliq AI',
+      duration: 'Dec 2025 - Present',
+      location: 'Bangalore, India',
+      responsibilities: [
+        "Built internal operations tools for hospital client monitoring, subscription tracking, and automated alert management for expiring plans and low-usage accounts.",
+        "Developed scalable healthcare automation systems including unified DICOM routing, dynamic patient report platforms, and configurable renewal reminder workflows across multiple AI products.",
+        "Improved operational efficiency by automating client onboarding, Docker service provisioning, credential generation, and deployment workflows, reducing setup time from ~30 minutes to ~1 minutes."
+      ]
+    },
+    {
       title: 'Full Stack Developer Intern',
       company: 'Varcons Technologies',
       duration: 'Feb 2025 - May 2025',

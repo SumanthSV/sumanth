@@ -44,7 +44,7 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="fancy-underline text-xl md:text-2xl text-gray-300 leading-relaxed"
           >
-            Software Developer
+            Software Engineer
           </motion.p>
           
           <motion.p
