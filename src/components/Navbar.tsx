@@ -49,12 +49,12 @@ const Navbar = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 3, ease: 'easeIn' }}
-        className={`fixed top-4 left-[25%] md:left-1/2 translate-x-0 md:-translate-x-1/2 z-50 w-[75%] md:max-w-3xl px-4 sm:px-6 md:px-12 box-border
+        className={`fixed top-4 right-4 md:right-6 z-50 w-[90%] md:w-auto max-w-3xl px-4 sm:px-6 md:px-8 box-border
 rounded-full py-2 ${isScrolled ? 'glass-effect glow-effect' : 'glass-effect'}`}
 >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between md:justify-end gap-8 w-full md:w-auto">
           <motion.div
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 whitespace-nowrap"
             whileHover={{ scale: 1.1 }}
             transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           >
@@ -75,12 +75,12 @@ rounded-full py-2 ${isScrolled ? 'glass-effect glow-effect' : 'glass-effect'}`}
           </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-10">
             {navItems.map((item, index) => (
               <motion.button
                 key={item.label}
                 onClick={() => handleNavClick(item)}
-                className="text-white/80 hover:text-white transition-colors duration-300 relative group"
+                className="text-white/80 hover:text-white transition-colors duration-300 relative group whitespace-nowrap"
                 whileHover={{ scale: 1.1 }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
