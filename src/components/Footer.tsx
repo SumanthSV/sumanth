@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
                 </div>
               </div>
               <p className="text-slate-400">
-                <span className="text-slate-300">Location:</span> Davanagere, Karnataka
+                <span className="text-slate-300">Location:</span> Bengaluru, Karnataka
               </p>
               <p className="text-slate-400">
                 <span className="text-slate-300">Available for:</span> Freelance & Full-time
