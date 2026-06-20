@@ -49,7 +49,7 @@ const Navbar = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 3, ease: 'easeIn' }}
-        className={`fixed top-4 left-[25%] md:left-[49%] translate-x-0 md:-translate-x-1/2 z-50 w-[75%] md:w-full max-w-[90%] md:max-w-3xl px-4 sm:px-6 md:px-12 box-border
+        className={`fixed top-4 left-[25%] md:left-1/2 translate-x-0 md:-translate-x-1/2 z-50 w-[75%] md:max-w-3xl px-4 sm:px-6 md:px-12 box-border
 rounded-full py-2 ${isScrolled ? 'glass-effect glow-effect' : 'glass-effect'}`}
 >
         <div className="flex items-center justify-between">
